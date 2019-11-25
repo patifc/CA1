@@ -1,0 +1,26 @@
+{
+  "name": "ca1",
+  "version": "1.0.0",
+  "description": "my first web project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patifc/CA1.git"
+  },
+  "author": "Patricia Correia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patifc/CA1/issues"
+  },
+  "homepage": "https://github.com/patifc/CA1#readme",
+  "keywords": [
+    "CA1"
+  ],
+  "dependencies": {
+    "express": "^4.17.1",
+    "xslt-processor": "^0.11.5"
+  }
+}
