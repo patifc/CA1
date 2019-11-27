@@ -6,14 +6,17 @@
 		<head>
 			<title> Puppy's Adoption </title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-       <link href="Mypuppylist.css" rel="stylesheet" type="text/css" />
-       
-                <!-- Include the JavaScript code for processing the XML data -->
-               <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+       <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
                 <script src="views/Mypuppylist.js"></script>
                <script>
 			        window.addEventListener("load", function() {
-			            
+                        
+                        
 			            document.querySelector("#button").addEventListener("click", function() {
 			                document.forms[0].txtAdoptPuppy.value = calculateBill('puppylist');
 			            });
@@ -32,7 +35,7 @@
          <img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="100" height="100"></img>
     </h2>
     <h3> Select your puppy from the list below. To check if it still available, click the Adopte this puppy button.</h3>
-    <table id="puppylist" border="1" class="indent">
+    <table id="puppylist" border="1" class="indent table-hover table-sm">
 	<thead>
 	<tr>
       <th>Name</th>
@@ -53,15 +56,18 @@
 	  		<td align="right">
               <xsl:value-of select="name" />
              
-             <button id="button1"> Adopt this puppy </button>
+            <button type="button" class="btn btn-outline-success btn-sm">Adopt</button>
+            
              </td>
              <td>
-              <xsl:value-of select="dog" />
-              <img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="100" height="100"></img>
-        </td>	
+            
+              <xsl:variable name="link" select="img" />
+              <img src="{$link}" width="100" height="100" /> 
+               
+         </td>	
 	  	<td>
 	  		<xsl:value-of select="description" />
-        </td>>
+        </td>
 	  	<td align="right">
 	  		<xsl:value-of select="breed" />
 	  	</td>
