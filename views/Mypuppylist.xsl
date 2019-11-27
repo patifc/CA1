@@ -6,13 +6,12 @@
 		<head>
 			<title> Puppy's Adoption </title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-                <link href="Mypuppylist.css" rel="stylesheet" type="text/css" />
-
-                
-               
+       <link href="Mypuppylist.css" rel="stylesheet" type="text/css" />
+       
                 <!-- Include the JavaScript code for processing the XML data -->
+               <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
                 <script src="views/Mypuppylist.js"></script>
-                <script>
+               <script>
 			        window.addEventListener("load", function() {
 			            
 			            document.querySelector("#button").addEventListener("click", function() {
@@ -28,9 +27,12 @@
 
 </head>
 	<body>
-	<h1> My puppy's Adoption</h1>
+    <h1> My puppy's Adoption</h1>
+    <h2>
+         <img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="100" height="100"></img>
+    </h2>
     <h3> Select your puppy from the list below. To check if it still available, click the Adopte this puppy button.</h3>
-    <table id="puppylist" border="2" class="indent">
+    <table id="puppylist" border="1" class="indent">
 	<thead>
 	<tr>
       <th>Name</th>
@@ -51,10 +53,11 @@
 	  		<td align="right">
               <xsl:value-of select="name" />
              
-             <button id="adopt this puppy"> Adopt this puppy </button>
+             <button id="button1"> Adopt this puppy </button>
              </td>
              <td>
               <xsl:value-of select="dog" />
+              <img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="100" height="100"></img>
         </td>	
 	  	<td>
 	  		<xsl:value-of select="description" />
@@ -68,17 +71,15 @@
 
 	  	<td>
 	  	 <xsl:value-of select="sex" />
-
-	  	</td>
+          </td>
+          
 	  </tr>
     </xsl:for-each>
-
-    </tbody>
+    <!--> <script type="text/javascript" src="Mypuppylist.js"></script>>-->
+        </tbody>
     </table>
     <form class="indent">
-   	
-    	
-    		 	</form>
+    </form>
     </body>
 	</html>
     
