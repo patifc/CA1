@@ -5,6 +5,7 @@ var http = require('http'),
     xml2js= require('xml2js'),
     xmlParse = require('xslt-processor').xmlParse,
     xsltProcess = require('xslt-processor').xsltProcess;
+
 var router = express();
 var server = http.createServer(router);
 
@@ -12,6 +13,7 @@ router.use(express.static(path.resolve(__dirname, 'views')));
 
  router.use(express.urlencoded({extended: true}));
 router.use(express.json());
+
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
   var filepath = path.normalize(path.join(__dirname, filename));
@@ -59,7 +61,7 @@ router.post('/post/json', function(req, res) {
     // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
     xmlFileToJs('Mypuppylist.xml', function(err, result) {
       if (err) throw (err);
-      result.puppy.section[obj.sec_n].entree.push({'name': obj.name, 'dog': obj.price,  'description': obj.price,  'breed': obj.price,  'age': obj.price,  'sex': obj.price});
+      result.puppy.section[obj.sec_n].entree.push({'name': obj.name, 'dog': obj.dog,  'description': obj.description,  'breed': obj.breed,  'age': obj.age,  'sex': obj.sex});
       console.log(result);
       jsToXmlFile('Mypuppylist.xml', result, function(err) {
         if (err) console.log(err);
@@ -72,10 +74,11 @@ router.post('/post/json', function(req, res) {
 
   // Re-direct the browser back to the page, where the POST request came from
   res.redirect('back');
+ 
 
 });
 
-server.listen(process.env.PORT || 3001, process.env.IP, function(){
+server.listen(process.env.PORT || 3000, process.env.IP, function(){
 var addr = server.address();
 console.log("Server is listening at", addr.address + ":" + addr.port)
 });
