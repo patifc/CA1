@@ -11,8 +11,8 @@
   <title>Puppy's adoption</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/Mypuppylist.css" rel="stylesheet">
+  <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Mypuppylist.css"  type="text/css">
 </head>
 
 <body>
@@ -102,13 +102,30 @@
 
   <!-- Bootstrap core JavaScript -->
  
-  <!----<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="jquery/table.js"></script>-->
-<script src="jquery/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script  src="jquery/table.js"></script>
+ <!-- <script type="text/javascript" src="jquery/table.js"></script>
+<script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+<script>function draw_table(){
+    $("#results").empty();
+    $.getJSONuncached = function(url) {
+        return $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,
+            success: function(html) {
+                $("#results").append(html);
+            }
+        });
+    };
+    $.getJSONuncached("/get/html")
+}
+$(document).ready(function(){
+    draw_table();
+})</script>
+
 
 
 </body>
