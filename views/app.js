@@ -9,9 +9,9 @@ var http = require('http'),
 var router = express();
 var server = http.createServer(router);
 
-router.use(express.static(path.resolve(__dirname, 'views')));
+router.use(express.static(path.join(__dirname, 'views')));
 
- router.use(express.urlencoded({extended: true}));
+router.use(express.urlencoded({extended: true}));
 router.use(express.json());
 
 // Function to read in XML file and convert it to JSON
@@ -32,11 +32,15 @@ function jsToXmlFile(filename, obj, cb) {
 router.get('/', function(req, res) {
      const index = fs.readFileSync('index.html', 'utf-8');
      res.end(index);
+     
 
 })
 
+  
+
 
 router.get('/get/html', function(req, res) {
+
 
 
 
@@ -78,7 +82,7 @@ router.post('/post/json', function(req, res) {
 
 });
 
-server.listen(process.env.PORT || 3000, process.env.IP, function(){
+server.listen(process.env.PORT || 3003, process.env.IP, function(){
 var addr = server.address();
 console.log("Server is listening at", addr.address + ":" + addr.port)
 });

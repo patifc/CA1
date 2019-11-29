@@ -3,7 +3,7 @@
 <xsl:template match="/">
 
 
-    <table id="puppylist" border="1" class="indent table-hover table-sm">
+    <table id="results" border="1" class="indent table-hover">
 	<thead>
 	<tr>
         <th colspan="6"> Dogs Selection </th>
@@ -23,20 +23,14 @@
 
 	  <xsl:for-each select="/puppyListing/puppy">
 	  	<tr>
-              
-            
 	  		<td align="right" colspan="6">
-              <xsl:value-of select="@name" />
+              <xsl:value-of select="name" />
               </td>
              
             <button type="button" class="btn btn-outline-success btn-sm">Adopt</button>
-            
-            
              <td>
-            
               <xsl:variable name="link" select="img" />
-              <img src="{$link}" width="100" height="100" /> 
-               
+              <img src="{$link}" width="100" height="100" />      
          </td>	
 	  	<td>
 	  		<xsl:value-of select="description" />
@@ -54,7 +48,7 @@
           
 	  </tr>
     </xsl:for-each>
-    <!--> <script type="text/javascript" src="Mypuppylist.js"></script>>-->
+
         </tbody>
     </table>
     
