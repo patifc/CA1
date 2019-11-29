@@ -6,10 +6,10 @@
     <table id="results" border="1" class="indent table-hover">
 	<thead>
 	<tr>
-        <th colspan="6"> Dogs Selection </th>
+        <th colspan="12"> Dogs Selection </th>
         </tr>
         <tr>
-      <th>Name</th>
+      <th colspan="6"> Name</th>
       <th> Dog </th>
       <th>Description</th>
 	  <th>Breed</th>
@@ -25,9 +25,10 @@
 	  	<tr>
 	  		<td align="right" colspan="6">
               <xsl:value-of select="name" />
+               <button type="button" class="btn btn-outline-success btn-sm">Adopt</button>
               </td>
              
-            <button type="button" class="btn btn-outline-success btn-sm">Adopt</button>
+           
              <td>
               <xsl:variable name="link" select="img" />
               <img src="{$link}" width="100" height="100" />      
