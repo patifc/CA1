@@ -48,7 +48,7 @@ router.post('/post/json', function(req, res) {
     xmlFileToJs('Mypuppylist.xml', function(err, result) {
       if (err) throw (err);
       console.log(obj.name);
-      result.puppyListing.puppy.push({'name': obj.name, 'dog': obj.dog,  'description': obj.description,  'breed': obj.breed,  'age': obj.age,  'sex': obj.sex});
+      result.puppyListing.puppy.push({'name': obj.name, 'description': obj.description,  'breed': obj.breed,  'age': obj.age,  'sex': obj.sex});
       console.log(result);
       jsToXmlFile('Mypuppylist.xml', result, function(err) {
         if (err) console.log(err);

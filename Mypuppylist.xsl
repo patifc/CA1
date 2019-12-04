@@ -10,7 +10,6 @@
         </tr>
         <tr>
       <th colspan="6"> Name</th>
-      <th> Dog </th>
       <th>Description</th>
 	  <th>Breed</th>
 	  <th>Age</th>
@@ -29,10 +28,7 @@
               </td>
              
            
-             <td>
-              <xsl:variable name="link" select="img" />
-              <img src="{$link}" width="100" height="100" />      
-         </td>	
+            
 	  	<td>
 	  		<xsl:value-of select="description" />
         </td>
