@@ -4,6 +4,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
+  background-color: blue;
   margin-bottom: 60px;
 }
 .footer {

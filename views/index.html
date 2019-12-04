@@ -3,115 +3,102 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-  <title>Puppy's adoption</title>
+	<title>Puppy's adoption</title>
 
-  <!-- Bootstrap core CSS -->
-  <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/Mypuppylist.css"  type="text/css">
+	<!-- Bootstrap core CSS -->
+	<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/Mypuppylist.css" type="text/css">
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Puppy's Adoption</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">Puppy's Adoption</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1> My puppy's Adoption</h1> 
+	<!-- Page Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h1> My puppy's Adoption</h1>
 
-    <img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="200" height="100"></img>
-     </div>
-     <div id="results" class="col-lg-8 text-center order-3"></div>
-
-    
-
-  </br>
-  <div class="col-lg-3 text-right order-2">
-            <form enctype="application/json" action="/post/json" method="post">
-                <div class="form-group">
-                    <select class="form-control" name="puppy_n">
-                        <option value="0">Name</option>
-                        <option value="1">Dog</option>
-                        <option value="2">Description</option>
-                        <option value="3">Breed</option>
-                        <option value="4">Age</option>
-                        <option value="5">Sex</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="name" placeholder="name">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="dog" placeholder="dog">
-                </div>
-                 <div class="form-group">
-                    <input class="form-control" type="text" name="description" placeholder="description">
-                </div>
-                 <div class="form-group">
-                    <input class="form-control" type="text" name="breed" placeholder="breed">
-                </div>
-                 <div class="form-group">
-                    <input class="form-control" type="text" name="age" placeholder="age">
-                </div>
-                 <div class="form-group">
-                    <input class="form-control" type="text" name="sex" placeholder="sex">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-        </div>
-        </div>
+				<img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="200" height="100"></img>
+			</div>
+			<div id="results" class="col-lg-9 text-center order-3"></div>
 
 
-    <footer class="footer">
-      <div class="container">
-        <!----<span class="text-muted">&copy; 2019</span>-->
-      </div>
-    </footer>
 
-  <!-- Bootstrap core JavaScript -->
- 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="jquery/table.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!----<script type="text/javascript" src="jquery/jquery.min.js"></script>
+			</br>
+			<div class="col-lg-2 text-right order-2">
+				<form enctype="application/json" action="/post/json" method="post">
+					<div class="form-group">
+						<input class="form-control" type="text" name="name" placeholder="name">
+                    </div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="dog" placeholder="dog">
+                    </div>
+							<div class="form-group">
+								<input class="form-control" type="text" name="description" placeholder="description">
+                </div>
+								<div class="form-group">
+									<input class="form-control" type="text" name="breed" placeholder="breed">
+                </div>
+									<div class="form-group">
+										<input class="form-control" type="text" name="age" placeholder="age">
+                </div>
+										<div class="form-group">
+											<input class="form-control" type="text" name="sex" placeholder="sex">
+                </div>
+											<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- Bootstrap core JavaScript -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jquery/table.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!----<script type="text/javascript" src="jquery/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
 
 
 
 </body>
+
 </html>

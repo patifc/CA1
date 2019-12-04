@@ -1,47 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<puppyListing title= "My Puppys">
-
-<puppy>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<puppyListing title="My Puppys">
+  <puppy>
     <name> Cinamon </name>
-    <img>https://thehappypuppysite.com/wp-content/uploads/2018/07/fox-terrier-long.jpg
+    <img>https://thehappypuppysite.com/wp-content/uploads/2018/07/fox-terrier-long.jpg&#xD;
          </img>
-   <description> Cinamon is full of energy, his favorite snack are biscuits, he will bring you happiness and lots of funny moments.</description>
+    <description> Cinamon is full of energy, his favorite snack are biscuits, he will bring you happiness and lots of funny moments.</description>
     <breed>Terrier</breed>
     <age>05 years</age>
     <sex> female </sex>
-
-</puppy>
- <puppy>
-     <name> Luky </name>
-     <img>https://www.loveyourdog.com/wp-content/uploads/2019/04/Toy-Poodle.jpg</img>
- 	<description>Luky is such a terrific dog! he has a brave spirit, and is always looking for a new adventure exploring the garden. You will never have a boring moment with him.</description>
- 	<breed> Poodle </breed>
- 	<age>02 years</age>
- 	<sex> male </sex>
- 	</puppy>
-
- 	<puppy>
-        <name> Cha Cha </name>
-       <img>https://thehappypuppysite.com/wp-content/uploads/2017/08/patterdale-terrier.jpg</img> 
- 	   <description> Cha Cha is a sweet litte girl who is shy aroud new people but will actively 
+  </puppy>
+  <puppy>
+    <name> Luky </name>
+    <img>https://www.loveyourdog.com/wp-content/uploads/2019/04/Toy-Poodle.jpg</img>
+    <description>Luky is such a terrific dog! he has a brave spirit, and is always looking for a new adventure exploring the garden. You will never have a boring moment with him.</description>
+    <breed> Poodle </breed>
+    <age>02 years</age>
+    <sex> male </sex>
+  </puppy>
+  <puppy>
+    <name> Cha Cha </name>
+    <img>https://thehappypuppysite.com/wp-content/uploads/2017/08/patterdale-terrier.jpg</img>
+    <description> Cha Cha is a sweet litte girl who is shy aroud new people but will actively &#xD;
         seek interaction when approached in a calm and getle way. She is quite happy to play with other dogs but her favourite thing in life is her tennis ball.</description>
- 	   	<breed> Terrier: Patterdale </breed>
- 	   	<age> 7 years</age>
- 	   	<sex> female </sex>
- 	   </puppy>
-
- 	   <puppy>
-        <name> Bubba </name>
-        <img>https://lelum.pl/wp-content/uploads/2019/01/buldogangielski-1021x580.jpg</img>
- 	   <description>Bubba is a sweet two-year-old who is full of fun when he gets to know you, he loves nothing more than a snuggle and some play time. He will definitely love a family that is willing to take things slowly with him and help him adjust to new environments.</description>
- 	   	<breed>Bulldog</breed>
- 	   	<age> 2 years</age>
- 	   	<sex> male </sex>
- 	   </puppy>
-
- 	</puppyListing>
-
-
-
-
-
+    <breed> Terrier: Patterdale </breed>
+    <age> 7 years</age>
+    <sex> female </sex>
+  </puppy>
+  <puppy>
+    <name> Bubba </name>
+    <img>https://lelum.pl/wp-content/uploads/2019/01/buldogangielski-1021x580.jpg</img>
+    <description>Bubba is a sweet two-year-old who is full of fun when he gets to know you, he loves nothing more than a snuggle and some play time. He will definitely love a family that is willing to take things slowly with him and help him adjust to new environments.</description>
+    <breed>Bulldog</breed>
+    <age> 2 years</age>
+    <sex> male </sex>
+  </puppy>
+  <puppy>
+    <name>ghgfg</name>
+    <dog>hgfgfhg</dog>
+    <description>gfhgfgh</description>
+    <breed>fhgfhgf</breed>
+    <age>gghfhg</age>
+    <sex>fhfg</sex>
+  </puppy>
+</puppyListing>
