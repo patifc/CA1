@@ -23,7 +23,6 @@
 		<div class="container">
 			<a class="navbar-brand" href="#">Puppy's Adoption</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
       </button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
@@ -38,7 +37,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#">Services</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item"><i class="code icon"></i>
 						<a class="nav-link" href="#">Contact</a>
 					</li>
 				</ul>
@@ -50,9 +49,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
+            	<img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="200" height="100"></img>
 				<h1> My puppy's Adoption</h1>
 
-				<img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="200" height="100"></img>
+			
 			</div>
 			<div id="results" class="col-lg-8 text-center order-3"></div>
 
@@ -62,24 +62,30 @@
 			<div class="col-lg-2 text-right order-2">
 				<form enctype="application/json" action="/post/json" method="post">
 					<div class="form-group">
-						<input class="form-control" type="text" name="name" placeholder="name">
+						<input  pattern="[A-Za-z]{1,32}" class="form-control" type="text" name="name" placeholder="name">
+                        <p class="text-muted">Please add only letters</p>
                     </div>
                     		<div class="form-group">
 								<input class="form-control" type="text" name="description" placeholder="description">
+                                 <p class="text-muted">Please add only letters</p>
                 </div>
 								<div class="form-group">
-									<input class="form-control" type="text" name="breed" placeholder="breed">
+									<input  pattern="[A-Za-z]{1,32}"class="form-control" type="text" name="breed" placeholder="breed">
+                                     <p class="text-muted">Please add only letters</p>
                 </div>
 									<div class="form-group">
-										<input class="form-control" type="text" name="age" placeholder="age">
+										<input  pattern="[0-9]"class="form-control" type="text" name="age" placeholder="age">
+                                         <p class="text-muted">Please add only numbers</p>
                 </div>
 										<div class="form-group">
-											<input class="form-control" type="text" name="sex" placeholder="sex">
+											<input  pattern="[A-Za-z]{1,32}" class="form-control" type="text" name="sex" placeholder="sex">
+                                             <p class="text-muted">Please add only letters</p>
                 </div>
-											<button type="submit" class="btn btn-success">Submit</button>
+											<button type="submit" class="btn  btn-block  btn-success">Submit</button>
 				</form>
+                <button id="edit" class="btn btn-block btn-primary">Edit</button>
                 <button id="delete" class="btn btn-block btn-danger">Delete</button>
-                    <p class="text-muted">To delete an entree, click the required row first</p>
+                    <p class="text-muted">To edit or delete a Dog, click the required row first</p>
 			</div>
 
 		</div>

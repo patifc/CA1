@@ -6,7 +6,7 @@
         <table id="results" border="1" class="indent table-hover">
             <thead>
                 <tr>
-                    <th colspan="12"> Dogs Selection </th>
+                    <th colspan="12"></th>
                 </tr>
                 <tr>
                     <th colspan="7"> Name</th>
@@ -23,16 +23,14 @@
                 <xsl:for-each select="/puppyListing/puppy">
                     <tr id="{position()}">
                         <td align="right" colspan="6">
-
+                             <input name="item0" type="checkbox" /> 
                             <xsl:value-of select="name" />
                             <button type="button" class="btn btn-outline-success btn-sm">Adopt</button>
                             
                             <td align="center"></td>
 
                         </td>
-                        <td>
-                            <input name="item0" type="checkbox" />
-                        </td>>
+                        
 
                         <td>
                             <xsl:value-of select="description" />

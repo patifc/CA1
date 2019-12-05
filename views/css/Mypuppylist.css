@@ -16,7 +16,7 @@ table, th, td {
 }
  table {
      border-collapse: collapse;
-     border: 2px solid rgb(10, 10, 10);
+     border: 2px solid white;
      width:100%;
 }
  td, th {
@@ -28,6 +28,9 @@ table, th, td {
  th {
      font-weight: bold;
       border: 2px solid rgb(10, 10, 10);
+}
+i.icon{
+    font-size: 2em;
 }
      
      

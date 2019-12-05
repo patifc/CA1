@@ -5,9 +5,12 @@ var http = require('http'),
     xml2js = require('xml2js'),
     xmlParse = require('xslt-processor').xmlParse,
     xsltProcess = require('xslt-processor').xsltProcess;
+    expAutoSan = require('express-autosanitizer');
+
 
 var router = express();
 var server = http.createServer(router);
+
 
 router.use(express.static(path.resolve(__dirname, 'views')));
 
@@ -16,6 +19,9 @@ router.use(express.static(path.resolve(__dirname, 'views')));
 
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
+router.use(expAutoSan.all);
+router.set('view engine', 'ejs');
+router.set('views', path.join(__dirname, 'views'));
 
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
@@ -83,7 +89,6 @@ router.post('/post/json', function (req, res) {
 
 // POST request to add to JSON & XML files
 router.post('/post/delete', function (req, res) {
-        console.log('deleting');
     // Function to read in a JSON file, add to it & convert to XML
     function deleteJSON(obj) {
         // Function to read in XML file, convert it to JSON, delete the required object and write back to XML file
@@ -102,6 +107,18 @@ router.post('/post/delete', function (req, res) {
     deleteJSON(req.body);
 
 });
+
+//EDIT ROUTE
+ router.get(":id/edit", function(req, res){
+     views.findById(req.params.id, function(err, foundviews){
+         if(err){
+      res.redirect("/edit");
+         }else{
+             res.render("edit", {views: foundViews});
+         }
+     });
+     
+ })
 
 //This is where we as the server to be listening to user with a specified IP and Port
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () {
