@@ -29,18 +29,4 @@
     <age> 2 years</age>
     <sex> male </sex>
   </puppy>
-  <puppy>
-    <name>ghgfg</name>
-    <description>gfhgfgh</description>
-    <breed>fhgfhgf</breed>
-    <age>gghfhg</age>
-    <sex>fhfg</sex>
-  </puppy>
-  <puppy>
-    <name/>
-    <description/>
-    <breed/>
-    <age/>
-    <sex/>
-  </puppy>
 </puppyListing>
