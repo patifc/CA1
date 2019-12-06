@@ -4,7 +4,7 @@ html {
 }
 body { 
   /* Margin bottom by footer height */
-   background-image: linear-gradient(rgba(231, 236, 160, 0.945), #e0cd5f);
+   background-image: linear-gradient(rgba(231, 236, 160, 0.945), rgb(218, 214, 37));
   
  /* background-color: rgba(0, 255, 179, 0.308) !important;*/
   margin-bottom: 60px;
@@ -22,7 +22,6 @@ body::after {
   position: absolute;
   z-index: -1;   
 }
-
 #navbar{
     background-image: linear-gradient(rgba(236, 160, 160, 0.945), white);
 
@@ -48,6 +47,8 @@ table, th, td {
      font-weight: bold;
       border: 2px solid white;
 }
+
+
 .hidden{
     visibility: hidden;
     display: none;
