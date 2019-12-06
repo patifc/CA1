@@ -73,13 +73,15 @@ function validateForm() {
     alert("sex must be filled out");
     return false;
   }
-}
 //This code in from sweetalert.com
 $("#botao, .close").click(function () {
         $("#buttonSuccess").toggleClass("hidden");
         swal("Yay!", "You added a new dog!", "success");
 
 });
+
+}
+
 //This code in from sweetalert.com
 $("#delete, .close").click(function () {
         $("#buttonDelete").toggleClass("hidden");
