@@ -1,3 +1,5 @@
+<!-- This code was passed to me from Mikhail https://github.com/mikhail-cct/CA1-In-class-Demo -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,15 +15,19 @@
 	<!-- Bootstrap core CSS -->
 	<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="css/Mypuppylist.css"  rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+    <script>import swal from 'sweetalert';</script>
+    
 	
 </head>
 
 <body>
 
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-white bg-dark static-top">
-		<div class="container">
-			<a class="navbar-brand" href="#">Puppy's Adoption</a>
+	<nav class="navbar navbar-expand-lg navbar-white bg-warning static-top">
+		<div class="container" >
+			<a class="navbar-brand"  href="#">Puppy's Adoption</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       </button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
@@ -49,8 +55,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-            	<img src="https://cdn-04.independent.ie/regionals/newrossstandard/lifestyle/article38571541.ece/70abc/AUTOCROP/w620/2019-10-08_wex_53943643_I1.JPG" width="200" height="100"></img>
-				<h1> My puppy's Adoption</h1>
+				<h1><i class="fas fa-heart"></i> My puppy's Adoption<i class="fas fa-heart"></i></h1>
 
 			
 			</div>
@@ -60,12 +65,14 @@
 
 			</br>
 			<div class="col-lg-2 text-right order-2">
-				<form enctype="application/json" action="/post/json" method="post">
+            <!--validation part of code from https://www.w3schools.com/js/js_validation.asp-->
+				<form name= "form" enctype="application/json" action="/post/json" onsubmit="return validateForm()" method="post"  >
 					<div class="form-group">
 						<input  pattern="[A-Za-z]{1,32}" class="form-control" type="text" name="name" placeholder="name">
                         <p class="text-muted">Please add only letters</p>
                     </div>
                     		<div class="form-group">
+                            
 								<input class="form-control" type="text" name="description" placeholder="description">
                                  <p class="text-muted">Please add only letters</p>
                 </div>
@@ -81,15 +88,18 @@
 											<input  pattern="[A-Za-z]{1,32}" class="form-control" type="text" name="sex" placeholder="sex">
                                              <p class="text-muted">Please add only letters</p>
                 </div>
-											<button type="submit" class="btn  btn-block  btn-success">Submit</button>
+											<button id="botao" type="submit" class="btn  btn-block  btn-success">Submit</button>
+                                           
 				</form>
-                <button id="edit" class="btn btn-block btn-primary">Edit</button>
+               
                 <button id="delete" class="btn btn-block btn-danger">Delete</button>
                     <p class="text-muted">To edit or delete a Dog, click the required row first</p>
 			</div>
 
 		</div>
 	</div>
+
+
 
 
 
@@ -101,12 +111,10 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="jquery/table.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    
-	<!----<script type="text/javascript" src="jquery/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
-
-
-
+   
+	<!-- This code was passed to me from Mikhail https://github.com/mikhail-cct/CA1-In-class-Demo -->
 </body>
 
 </html>
