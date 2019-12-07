@@ -44,7 +44,12 @@ function delete_row(sec, ent)
 			cache: false,
 			success: setTimeout(draw_table, 1000)
 		})
-	})
+    })
+    //This code in from sweetalert.com
+$("#delete, .close").click(function () {
+        $("#buttonDelete").toggleClass("hidden");
+        swal("Deleted!", "You just deleted a row", "info");
+});
 };
 //Function to validade the form, this code is from https://www.w3schools.com/js/js_validation.asp
 function validateForm() {
@@ -82,11 +87,7 @@ $("#botao, .close").click(function () {
 
 }
 
-//This code in from sweetalert.com
-$("#delete, .close").click(function () {
-        $("#buttonDelete").toggleClass("hidden");
-        swal("Deleted!", "You just deleted a row", "info");
-});
+
 ////////////////////////////////////////////////////////////////////////
 $(document).ready(function(){
     draw_table();
